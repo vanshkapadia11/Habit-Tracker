@@ -61,7 +61,7 @@ export const addUserData = async (uid, habit) => {
 
   if (userSnap.exists()) {
     updateDoc(userRef, {
-      habits: arrayUnion(habit),
+      habits: arrayUnion(habit), // Dont Forget The Array Union Stuff Man!!
     });
   } else {
     updateDoc(userRef, {
